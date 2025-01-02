@@ -1,0 +1,229 @@
+/* Wheel SVG */
+.cls-1 {
+    fill: #ff78ff;
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9 {
+    stroke: #000;
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-6,
+.cls-8 {
+    stroke-width: 3px;
+}
+
+.cls-10 {
+    stroke-width: .5px;
+}
+
+.cls-10,
+.cls-11 {
+    stroke: #fff;
+}
+
+.cls-11 {
+    stroke-width: .5px;
+}
+
+.cls-11,
+.cls-9 {
+    stroke-miterlimit: 4;
+}
+
+.cls-2 {
+    fill: #00db9a;
+}
+
+.cls-12 {
+    fill: url(#linear-gradient);
+}
+
+.cls-13 {
+    fill: #fff;
+}
+
+.cls-3 {
+    fill: aqua;
+}
+
+.cls-4,
+.cls-5 {
+    fill: #3927ff;
+}
+
+.cls-4,
+.cls-5,
+.cls-7 {
+    stroke-miterlimit: 4;
+}
+
+.cls-5,
+.cls-7 {
+    stroke-width: 3px;
+}
+
+.cls-6 {
+    fill: #0087ff;
+}
+
+.cls-7 {
+    fill: #00ffc2;
+}
+
+.cls-8 {
+    fill: #6353ff;
+}
+
+.cls-9 {
+    fill: #bb74ff;
+    stroke-width: 3px;
+}
+
+.cls-13:hover {
+    fill: #FFFFFF;
+}
+
+/* Wheel SVG Hover */
+@media only screen and (max-width: 768px) {
+    .wp-block-columns:not(.no-gutters) {
+        gap: 0px;
+    }
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.cheese-content {
+    min-height: 239px
+}
+
+.cyan-blue {
+    color: #00F1FF
+}
+
+.segment {
+    transition: all 0.3s ease-in-out;
+    transform-box: fill-box;
+}
+
+.segment:hover {
+    stroke: #FFFFFF
+}
+
+#segment-1:hover,
+#segment-1.active {
+    transform: translate(10px, -20px);
+}
+
+#segment-2:hover,
+#segment-2.active {
+    transform: translate(20px, -5px);
+}
+
+#segment-3:hover,
+#segment-3.active {
+    transform: translate(20px, 16px);
+}
+
+#segment-4:hover,
+#segment-4.active {
+    transform: translate(1px, 21px);
+}
+
+#segment-5:hover,
+#segment-5.active {
+    transform: translate(-15px, 11px);
+}
+
+#segment-6:hover,
+#segment-6.active {
+    transform: translate(-20px, -4px);
+}
+
+#segment-7:hover,
+#segment-7.active {
+    transform: translate(-10px, -22px);
+}
+
+.color-1 {
+    color: #00DB9A;
+    stroke: #00DB9A;
+    stroke-width: 1.5px;
+}
+
+.color-2 {
+    color: #00FFFF;
+    stroke: #00FFFF;
+    stroke-width: 1.5px;
+}
+
+.color-3 {
+    color: #6353FF;
+    stroke: #6353FF;
+    stroke-width: 1.5px;
+}
+
+.color-4 {
+    color: #3927FF;
+    stroke: #3927FF;
+    stroke-width: 1.5px;
+}
+
+.color-5 {
+    color: #0087FF;
+    stroke: #0087FF;
+    stroke-width: 1.5px;
+
+}
+
+.color-6 {
+    color: #BB74FF;
+    stroke: #BB74FF;
+    stroke-width: 1.5px;
+
+}
+
+.color-7 {
+    color: #FF78FF;
+    stroke: #FF78FF;
+    stroke-width: 1.5px;
+}
+
+/* Button */
+.btn {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: #FFFFFF;
+}
+
+.btn a:hover {
+    color: #FFFFFF;
+}
