@@ -120,85 +120,85 @@
 }
 
 .segment:hover {
-    stroke: #FFFFFF
+    stroke: #FFFFFF;
 }
 
-#segment-1:hover,
-#segment-1.active {
+/* Update hover and active states for new IDs */
+#PSA_Wheel-Services-Estimator:hover,
+#PSA_Wheel-Services-Estimator.active {
     transform: translate(10px, -20px);
 }
 
-#segment-2:hover,
-#segment-2.active {
+#PSA_Wheel-Services-Automation:hover,
+#PSA_Wheel-Services-Automation.active {
     transform: translate(20px, -5px);
 }
 
-#segment-3:hover,
-#segment-3.active {
+#PSA_Wheel-Resource-Management:hover,
+#PSA_Wheel-Resource-Management.active {
     transform: translate(20px, 16px);
 }
 
-#segment-4:hover,
-#segment-4.active {
+#PSA_Wheel-Services-Billing:hover,
+#PSA_Wheel-Services-Billing.active {
     transform: translate(1px, 21px);
 }
 
-#segment-5:hover,
-#segment-5.active {
+#PSA_Wheel-Services-Revenue-Management:hover,
+#PSA_Wheel-Services-Revenue-Management.active {
     transform: translate(-15px, 11px);
 }
 
-#segment-6:hover,
-#segment-6.active {
+#PSA_Wheel-Services-Analytics:hover,
+#PSA_Wheel-Services-Analytics.active {
     transform: translate(-20px, -4px);
 }
 
-#segment-7:hover,
-#segment-7.active {
+#PSA_Wheel-Services-Communities:hover,
+#PSA_Wheel-Services-Communities.active {
     transform: translate(-10px, -22px);
 }
 
-.color-1 {
+/* Color classes remain unchanged */
+.color-PSA_Wheel-Services-Estimator {
     color: #00DB9A;
-    stroke: #00DB9A;
+    stroke: #00FFFF;
     stroke-width: 1.5px;
 }
 
-.color-2 {
+.color-PSA_Wheel-Services-Automation {
     color: #00FFFF;
     stroke: #00FFFF;
     stroke-width: 1.5px;
 }
 
-.color-3 {
+.color-PSA_Wheel-Resource-Management {
     color: #6353FF;
-    stroke: #6353FF;
+    stroke: #00FFFF;
     stroke-width: 1.5px;
 }
 
-.color-4 {
+.color-PSA_Wheel-Services-Billing {
     color: #3927FF;
-    stroke: #3927FF;
+    stroke: #00FFFF;
     stroke-width: 1.5px;
 }
 
-.color-5 {
+.color-PSA_Wheel-Services-Revenue-Management {
     color: #0087FF;
-    stroke: #0087FF;
+    stroke: #00FFFF;
     stroke-width: 1.5px;
-
 }
 
-.color-6 {
+.color-PSA_Wheel-Services-Analytics {
     color: #BB74FF;
-    stroke: #BB74FF;
+    stroke: #00FFFF;
     stroke-width: 1.5px;
-
 }
 
-.color-7 {
+.color-PSA_Wheel-Services-Communities {
     color: #FF78FF;
-    stroke: #FF78FF;
+    stroke: #00FFFF;
     stroke-width: 1.5px;
 }
 
