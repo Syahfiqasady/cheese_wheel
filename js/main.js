@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Map WordPress page IDs to segments and CTA settings
   const pageSegmentMap = {
-    79803: 'segment-1', 
-    76272: 'segment-2', 
-    77368: 'segment-3', 
-    76483: 'segment-4', 
-    76360: 'segment-5', 
-    75910: 'segment-6', 
-    76346: 'segment-6', 
+    79803: 'PSA_Wheel-Services-Estimator',
+    76272: 'PSA_Wheel-Services-Automation',
+    77368: 'PSA_Wheel-Resource-Management',
+    76483: 'PSA_Wheel-Services-Billing',
+    76360: 'PSA_Wheel-Services-Revenue-Management',
+    75910: 'PSA_Wheel-Services-Analytics',
+    76346: 'PSA_Wheel-Services-Communities',
   };
 
   // Default segment details
@@ -24,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Detect the current page ID from the body class
   const bodyClasses = document.body.className;
   const currentPageId = Object.keys(pageSegmentMap).find(pageId => bodyClasses.includes(`page-id-${pageId}`));
-  const defaultSegmentId = currentPageId ? pageSegmentMap[currentPageId] : 'segment-2'; // Fallback to segment-2
+  const defaultSegmentId = currentPageId ? pageSegmentMap[currentPageId] : 'PSA_Wheel-Services-Estimator'; // Fallback to a default
   const defaultSegment = document.getElementById(defaultSegmentId);
 
   // Helper function to clear all active states
   function clearActiveStates() {
     segments.forEach(segment => {
-      const segmentNumber = segment.id.split('-')[1];
-      const colorClass = `color-${segmentNumber}`;
+      const segmentId = segment.id; // Using new ID format
+      const colorClass = `color-${segmentId}`;
       segment.classList.remove('active', colorClass);
       segment.querySelectorAll('.cls-10').forEach(child => {
         child.classList.remove(colorClass);
@@ -41,18 +41,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to activate a segment
   function activateSegment(segment) {
-    const segmentNumber = segment.id.split('-')[1];
-    const colorClass = `color-${segmentNumber}`;
+    const segmentId = segment.id; // Using new ID format
+    const colorClass = `color-${segmentId}`;
 
+    // Add active class and color class to the segment
     segment.classList.add('active', colorClass);
+
+    // Add color class to child elements with cls-10
     segment.querySelectorAll('.cls-10').forEach(child => {
       child.classList.add(colorClass);
     });
 
+    // Update hover text content and styles
     hoverText1.textContent = segment.getAttribute('data-label');
     hoverText2.textContent = segment.getAttribute('data-label2');
     hoverText3.textContent = segment.getAttribute('data-label3');
 
+    // Update cheeseLink based on segment
     if (segment === defaultSegment) {
       cheeseLink.href = defaultLink;
       cheeseLink.textContent = defaultText;
@@ -61,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cheeseLink.textContent = segment.getAttribute('data-button-text');
     }
 
+    // Update the active segment
     activeSegment = segment;
   }
 
@@ -100,4 +106,24 @@ document.addEventListener('DOMContentLoaded', () => {
       activateSegment(activeSegment);
     });
   });
+  // Track button clicks with Google Analytics
+  cheeseLink.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default action for debugging purposes
+
+    // Get the active segment or fall back to default segment
+    const activeSegment = document.querySelector('.segment.active') || defaultSegment;
+    const sectionName = activeSegment ? activeSegment.getAttribute('data-label') || 'Unknown Section' : 'Unknown Section';
+    const ctaText = cheeseLink.textContent.trim() || 'Unknown CTA';
+
+    // Alert the data being passed to GA (testing purpose only)
+    alert(`Google Analytics Event:\n\nEvent: psa_wheel_cta_click\nSection Name: ${sectionName}\nCTA Text: ${ctaText}`);
+
+    // Push the event to Google Analytics
+    gtag('event', 'psa_wheel_cta_click', {
+      section_name: sectionName,
+      cta_text: ctaText,
+    });
+
+  });
+
 });
